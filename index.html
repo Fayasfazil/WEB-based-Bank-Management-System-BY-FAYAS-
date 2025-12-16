@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAYAS Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.2.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+    }
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(1rem); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+      animation: fade-in-up 0.5s ease-out forwards;
+    }
+    @keyframes balance-bounce-glow {
+      0% { transform: scale(1); text-shadow: none; }
+      50% { transform: scale(1.1); color: #fef08a; /* yellow-200 */ text-shadow: 0 0 12px #facc15; /* yellow-400 */ }
+      100% { transform: scale(1); text-shadow: none; }
+    }
+    .animate-balance-bounce-glow {
+      animation: balance-bounce-glow 0.8s ease-in-out;
+    }
+    @keyframes new-transaction-flash {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+        background-color: rgba(250, 204, 21, 0.25); /* amber-400 with 25% opacity */
+      }
+      70% {
+        opacity: 1;
+        transform: translateY(0);
+        background-color: rgba(250, 204, 21, 0.25);
+      }
+      100% {
+        opacity: 1;
+        background-color: transparent; /* Default bg-gray-800/60 is set on the element */
+      }
+    }
+    .animate-new-transaction {
+      animation: new-transaction-flash 1.5s ease-out forwards;
+    }
+  </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "FAYAS Bank",
+  "description": "A modern, visually-driven web banking application to manage accounts, transactions, and balances, featuring a dynamic UI and Python code generation for backend operations.",
+  "requestFramePermissions": []
+}
